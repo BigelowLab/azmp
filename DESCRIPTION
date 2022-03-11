@@ -1,0 +1,18 @@
+Package: azmpdata
+Title: azmpdata - manage local data of DFO-MPO calanus database
+Description: Managing local repository of DFO-MPO calanus database.
+URL: https://github.com/BigelowLab/azmpdata
+Version: 0.1
+Depends:
+    R (>= 4.1)
+Imports:
+    utils,
+    rlang,
+    dplyr,
+    readr,
+    sf
+Maintainer: Ben Tupper <btupper@bigelow.org>
+Author:  Caroline Lehoux <caroline.lehoux@dfo-mpo.gc.ca>, Ben Tupper <btupper@bigelow.org>
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.1.2
