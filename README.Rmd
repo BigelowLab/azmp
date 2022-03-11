@@ -7,24 +7,42 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## GitHub Documents
+## Requirements
 
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+  + [R v4.1+](https://www.r-project.org/)
+  + [rlang](https://CRAN.R-project.org/package=rlang)
+  + [dplyr](https://CRAN.R-project.org/package=dplyr)
+  + [readr](https://CRAN.R-project.org/package=readr)
+  + [sf](https://CRAN.R-project.org/package=sf)
+  
+## Installation
 
-## Including Code
-
-You can include R code in the document as follows:
-
-```{r cars}
-summary(cars)
+```
+remotes::install_github("BigelowLab/azmpcfin")
 ```
 
-## Including Plots
+## Initial Use
 
-You can also embed plots, for example:
+The premise of this package is that data may be stored in a single location but accessed by many users. To achieve this resource-friendly goal and still simplified access for each user, we need to inform the package where the data resides.  We do this by storing the path to the data location in each user's home directory in a hidden text file, "~/.azmpcfin".  That text file has just one line in it which contains the full path to the shared dataset.  For example, the author's contains `mnt/ecocast/coredata/dfompo/AZMP_data` which points to a shared network drive mounted on our linux platform.  
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+When the package is first loaded (ala `library(azmpcfin)`) the existence of the file is check, and if missing a warning is issued.
+
+You can create and populate that `~/.azmpcfin` using a text editors, or you can create using the provided function `set_data_path()`. Here is how the author created his own...
+
+```
+library(azmpcfin)
+azmpcfin::set_data_path("/mnt/ecocast/coredata/dfompo/AZMP_data")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+That's it.  If you ever move the data you'll have to modify the contents of this hidden text file.
+
+## Read the calanus data
+
+```{r}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(azmpcfin)
+})
+
+x <- read_calanus()
+glimpse(x)
