@@ -3,7 +3,7 @@
 #' @export
 #' @param filename char, the name of the config files
 #' @return logical TRUE if the config file exists
-has_data_path <- function(filename = "~/.azmpdata"){
+has_data_path <- function(filename = "~/.azmpcfin"){
   file.exists(filename[1])
 }
 
@@ -12,7 +12,7 @@ has_data_path <- function(filename = "~/.azmpdata"){
 #' @export
 #' @param path char, the path to the data - like '/mnt/ecocast/coredata/dfompo/AZMP_data'
 #' @param filename char, the name of the config files
-set_data_path <- function(path, filename = "~/.azmpdata"){
+set_data_path <- function(path, filename = "~/.azmpcfin"){
   cat(path[1], sep = "\n", file = filename[1])
 }
 
@@ -23,6 +23,6 @@ set_data_path <- function(path, filename = "~/.azmpdata"){
 #' @param root char, the root path directory
 #' @return character, the path to the data
 get_data_path <- function(...,
-                          root = readLines("~/.azmpdata")){
+                          root = readLines("~/.azmpcfin")){
   file.path(root, ...)
 }

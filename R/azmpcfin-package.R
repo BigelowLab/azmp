@@ -1,9 +1,9 @@
-#' azmpdata - manage local data of DFO-MPO calanus database
+#' azmpcfin - manage local data of DFO-MPO calanus database
 #'
 #' Functions for managing local repository of DFO-MPO calanus database.
 #'
 #' @docType package
 #' @importFrom rlang .data !! :=
-#' @name azmpdata
+#' @name azmpcfin
 #' @aliases azmp
 NULL

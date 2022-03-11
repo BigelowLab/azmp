@@ -4,7 +4,7 @@
 \alias{get_data_path}
 \title{Retrieve the user specified data path}
 \usage{
-get_data_path(..., root = readLines("~/.azmpdata"))
+get_data_path(..., root = readLines("~/.azmpcfin"))
 }
 \arguments{
 \item{...}{elements for \code{\link[base]{file.path}}}

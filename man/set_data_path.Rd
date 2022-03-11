@@ -4,7 +4,7 @@
 \alias{set_data_path}
 \title{Write the configuration file}
 \usage{
-set_data_path(path, filename = "~/.azmpdata")
+set_data_path(path, filename = "~/.azmpcfin")
 }
 \arguments{
 \item{path}{char, the path to the data - like '/mnt/ecocast/coredata/dfompo/AZMP_data'}

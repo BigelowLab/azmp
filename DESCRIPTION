@@ -1,7 +1,7 @@
-Package: azmpdata
+Package: azmpcfin
 Title: azmpdata - manage local data of DFO-MPO calanus database
 Description: Managing local repository of DFO-MPO calanus database.
-URL: https://github.com/BigelowLab/azmpdata
+URL: https://github.com/BigelowLab/azmpcfin
 Version: 0.1
 Depends:
     R (>= 4.1)

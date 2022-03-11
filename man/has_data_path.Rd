@@ -4,7 +4,7 @@
 \alias{has_data_path}
 \title{Test if a data path config file exists}
 \usage{
-has_data_path(filename = "~/.azmpdata")
+has_data_path(filename = "~/.azmpcfin")
 }
 \arguments{
 \item{filename}{char, the name of the config files}
