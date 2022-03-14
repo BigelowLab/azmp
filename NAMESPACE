@@ -3,6 +3,8 @@
 export(get_data_path)
 export(has_data_path)
 export(read_calanus)
+export(read_ctd)
+export(read_ctd_prof)
 export(set_data_path)
 importFrom(rlang,"!!")
 importFrom(rlang,":=")

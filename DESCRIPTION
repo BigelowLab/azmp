@@ -8,9 +8,11 @@ Depends:
 Imports:
     utils,
     rlang,
+    data.table,
     dplyr,
     readr,
-    sf
+    sf,
+    oce
 Maintainer: Ben Tupper <btupper@bigelow.org>
 Author:  Caroline Lehoux <caroline.lehoux@dfo-mpo.gc.ca>, Ben Tupper <btupper@bigelow.org>
 License: MIT + file LICENSE
